@@ -25,8 +25,10 @@ assert item2.quantity == 120
 assert item1.calculate_total_price() == float(15000*70)
 assert item2.calculate_total_price() == float(1000*120)
 
-# TestCase#5 name.getter
-assert item1.name == 'Монитор'
+# TestCase#5 Function apply discount
+Item.pay_rate = 0.8
+item1.apply_discount()
+assert item1.price == 12000
 
 # TestCase#6 name.setter
 item1.name = 'Смартфон'
