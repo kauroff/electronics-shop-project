@@ -43,7 +43,6 @@ assert len(Item.all) == 5
 # TestCase#8 Equal
 assert Item.string_to_number('7.7') == 7
 
-
 # TestCase#9 Repr and str
 assert repr(item1) == "Item('Смартфон', 12000, 70)"
 assert str(item1) == 'Смартфон'
