@@ -40,7 +40,7 @@ def test_count_positions():
     assert len(Item.all) == 5
 
 
-def test_equel():
+def test_equality():
     assert Item.string_to_number('7.7') == 7
 
 
