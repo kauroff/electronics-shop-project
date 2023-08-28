@@ -7,7 +7,7 @@ item2 = Item("Мышка", 1000, 120)
 item3 = Item("Заглушка", 1000, 120)
 
 
-def test_atribute():
+def test_attributes():
     assert Item.pay_rate == 1.0
     assert item1.name == 'Монитор'
     assert item2.name == 'Мышка'
