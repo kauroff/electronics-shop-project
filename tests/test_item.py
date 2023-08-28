@@ -22,8 +22,8 @@ assert item1.quantity == 70
 assert item2.quantity == 120
 
 # TestCase#4 Function total price
-assert item1.calculate_total_price() == float(15000*70)
-assert item2.calculate_total_price() == float(1000*120)
+assert item1.calculate_total_price() == float(15000 * 70)
+assert item2.calculate_total_price() == float(1000 * 120)
 
 # TestCase#5 Function apply discount
 Item.pay_rate = 0.8
@@ -43,3 +43,9 @@ assert len(Item.all) == 5
 # TestCase#8 Equal
 assert Item.string_to_number('7.7') == 7
 
+
+# TestCase#9 Repr and str
+assert repr(item1) == "Item('Смартфон', 12000, 70)"
+assert str(item1) == 'Смартфон'
+assert repr(item3) == "Item('Беспроводн', 1000, 120)"
+assert str(item2) == 'Мышка'
