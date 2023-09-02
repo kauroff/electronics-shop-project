@@ -4,7 +4,6 @@ from src.item import Item
 class Phone(Item):
     def __init__(self, name, price, quantity, number_of_sim):
         super().__init__(name, price, quantity)
-        # self.number_of_sim = number_of_sim
         if type(number_of_sim) == int and number_of_sim > 0:
             self.number_of_sim = number_of_sim
         else:
@@ -21,7 +20,8 @@ class Phone(Item):
         Метод срабатывает, когда используется оператор сложения.
         В параметре other хранится то, что справа от знака +
         """
-        return self.quantity + other.quantity
+        if isinstance(other, Phone) or isinstance(other, Item):
+            return self.quantity + other.quantity
 
     # @property
     # def number_of_sim(self) -> int:
