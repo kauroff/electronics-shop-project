@@ -1,4 +1,5 @@
 import csv
+from src.phone import Phone
 
 
 class Item:
@@ -27,7 +28,8 @@ class Item:
         return f'{self.__name}'
 
     def __add__(self, other):
-        return self.quantity + other.quantity
+        if isinstance(other, Item) or isinstance(other, Phone):
+            return self.quantity + other.quantity
 
     @property
     def name(self) -> any:
