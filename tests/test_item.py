@@ -49,3 +49,7 @@ def test_repr_and_str():
     assert str(item1) == 'Смартфон'
     assert repr(item3) == "Item('Беспроводн', 1000, 120)"
     assert str(item2) == 'Мышка'
+
+
+def test_adding():
+    assert item1 + item2 == 190
