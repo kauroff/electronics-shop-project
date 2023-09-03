@@ -11,8 +11,10 @@ def test_attributes():
     assert phone1.price == 150000
     assert phone1.quantity == 70
     assert phone2.number_of_sim == 2
-    # with pytest.raises(ValueError):
-    #     phone3.number_of_sim = 0
+    with pytest.raises(ValueError):
+        phone3.number_of_sim = 0
+    with pytest.raises(ValueError):
+        phone3.number_of_sim = 0.6
 
 
 def test_repr_and_str():
