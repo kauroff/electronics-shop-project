@@ -1,3 +1,6 @@
+from src.item import Item
+
+
 class Mixin:
 
     def __init__(self):
@@ -21,7 +24,7 @@ class Mixin:
             self.language = 'EN'
 
 
-class Keyboard(Mixin):
+class Keyboard(Mixin, Item):
     def __init__(self, name: str, price: int, quantity: int):
         self.name = name
         self.price = price
