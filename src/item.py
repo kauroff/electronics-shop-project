@@ -27,7 +27,14 @@ class Item:
         return f'{self.__name}'
 
     def __add__(self, other):
-        return self.quantity + other.quantity
+        """
+        Метод срабатывает, когда используется оператор сложения.
+        В параметре other хранится то, что справа от знака +
+        """
+        if isinstance(other, self.__class__):
+            return self.quantity + other.quantity
+        else:
+            raise TypeError('Сложение возможно только между экземплярами Item или наследниками.')
 
     @property
     def name(self) -> any:

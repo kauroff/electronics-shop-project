@@ -1,14 +1,24 @@
 class Mixin:
-    language = 'EN'
 
-    def __init__(self, language='EN'):
-        self.language = language
+    def __init__(self):
+        self.language = 'EN'
+
+    @property
+    def language(self):
+        return self.language
+
+    def __str__(self):
+        return f'{self.language}'
+
+    @language.setter
+    def language(self, language):
+        self.change_lang()
 
     def change_lang(self):
-        if Mixin.language == 'EN':
-            Mixin.language = 'RU'
-        elif Mixin.language == 'RU':
-            Mixin.language = 'EN'
+        if self.language == 'EN':
+            self.language = 'RU'
+        else:
+            self.language = 'EN'
 
 
 class Keyboard(Mixin):
@@ -19,7 +29,3 @@ class Keyboard(Mixin):
 
     def __str__(self):
         return f'{self.name}'
-
-    @property
-    def language(self):
-        return self.language
