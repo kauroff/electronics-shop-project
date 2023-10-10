@@ -2,9 +2,7 @@ from src.item import Item
 
 
 class Mixin:
-
-    def __init__(self):
-        self.language = 'EN'
+    language = 'EN'
 
     @property
     def language(self):
@@ -24,7 +22,7 @@ class Mixin:
             self.language = 'EN'
 
 
-class Keyboard(Mixin, Item):
+class Keyboard(Mixin):
     def __init__(self, name: str, price: int, quantity: int):
         self.name = name
         self.price = price
