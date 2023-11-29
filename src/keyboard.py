@@ -1,8 +1,5 @@
 class Mixin:
-    def __init__(self, name, price, quantity):
-        self.name = name
-        self.price = price
-        self.quantity = quantity
+    def __init__(self):
         self.__language = 'EN'
 
     def change_lang(self):
@@ -18,6 +15,13 @@ class Mixin:
 
 
 class Keyboard(Mixin):
+    def __init__(self, name, price, quantity):
+        super().__init__()
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+
 
     def __str__(self):
         return f'{self.name}'
