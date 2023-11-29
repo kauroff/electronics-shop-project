@@ -1,8 +1,5 @@
 class Mixin:
     def __init__(self):
-        #     self.name = name
-        #     self.price = price
-        #     self.quantity = quantity
         self.__language = 'EN'
 
     def change_lang(self):
@@ -12,21 +9,19 @@ class Mixin:
             self.__language = 'EN'
         return self
 
-    # @property
-    # def language(self):
-    #     return self.__language
+    @property
+    def language(self):
+        return self.__language
 
 
 class Keyboard(Mixin):
     def __init__(self, name, price, quantity):
+        super().__init__()
         self.name = name
         self.price = price
         self.quantity = quantity
 
-    @property
-    def language(self):
-        print('Hello world!')
-        return self.__language
+
 
     def __str__(self):
         return f'{self.name}'
