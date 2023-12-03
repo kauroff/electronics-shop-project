@@ -21,7 +21,5 @@ class Keyboard(Mixin):
         self.price = price
         self.quantity = quantity
 
-
-
     def __str__(self):
         return f'{self.name}'
